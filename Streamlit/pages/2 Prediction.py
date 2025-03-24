@@ -10,6 +10,7 @@ import seaborn as sns
 
 st.set_page_config(
     page_title="HR Attrition Prediction Tool",
+    page_icon="📊",
     layout="wide"
 )
 
