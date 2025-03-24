@@ -23,7 +23,7 @@ st.title("Employee Attrition Prediction & Risk Analysis")
 def load_data(file_path):
     return pd.read_csv(file_path)
 
-df = pd.read_csv("../Dataset/df_clean.csv")
+df = pd.read_csv("https://raw.githubusercontent.com/glenvj-j/Employee-Attrition-Prediction/23d88e3b08e90d14a8c62917720f26fc12180973/Dataset/df_clean.csv")
 
 def calculate_gaps(df):
     """
@@ -52,7 +52,7 @@ if 'df_test' not in st.session_state:
 
 # Button to load data
 if st.sidebar.button('Load Data'):
-    st.session_state.df_test = load_data('../Dataset/sample_employee_data.csv')
+    st.session_state.df_test = load_data('https://raw.githubusercontent.com/glenvj-j/Employee-Attrition-Prediction/refs/heads/main/Dataset/sample_employee_data.csv')
     st.session_state.data_loaded = True
 
 # Display data if loaded
@@ -72,7 +72,7 @@ if st.session_state.data_loaded and st.session_state.df_test is not None:
     df_filtered = df_test_a.loc[:, df_test_a.columns.isin(X.columns)]
 
     # Load prediction model
-    filename = '../HR Prediction Model.sav'
+    filename = 'https://github.com/glenvj-j/Employee-Attrition-Prediction/blob/main/HR%20Prediction%20Model.sav'
     loaded_model = pickle.load(open(filename, 'rb'))
 
     # Button to predict attrition
