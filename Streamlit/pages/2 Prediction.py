@@ -72,7 +72,7 @@ if st.session_state.data_loaded and st.session_state.df_test is not None:
     df_filtered = df_test_a.loc[:, df_test_a.columns.isin(X.columns)]
 
     # Load prediction model
-    filename = 'https://raw.githubusercontent.com/glenvj-j/Employee-Attrition-Prediction/main/HR%20Prediction%20Model.sav'
+    filename = 'HR Prediction Model.sav'
     loaded_model = pickle.load(open(filename, 'rb'))
 
     # Button to predict attrition
