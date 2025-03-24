@@ -9,7 +9,7 @@ st.set_page_config(
 )
 
 st.sidebar.success("Click Load Data to Start")
-st.image("../image/cover.jpg")
+st.image("https://raw.githubusercontent.com/glenvj-j/Employee-Attrition-Prediction/23d88e3b08e90d14a8c62917720f26fc12180973/image/cover.jpg")
 
 st.markdown(
     """
