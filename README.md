@@ -24,6 +24,32 @@ This project focuses on predicting employee attrition using machine learning. Th
 - **Feature Scaling:** Applied for numerical variables
 - **Model Evaluation:** Confusion matrix and SHAP values analyzed feature importance.
 
+- ## Model Performance Comparison
+
+ ## 📊 Cost Savings Overview  
+
+By implementing the attrition prediction model, the company can **save up to 880,000** by identifying employees at risk of leaving and taking preventive measures.
+
+| **Metric**               | **Base Model** | **Tuned Model** | **Improvement** |
+|--------------------------|--------------|--------------|---------------|
+| **Cost Reduction**       | 1,560,000    | 1,000,000    | **Saved: 560,000** |
+| **Potential Loss (if no model used)** | 1,880,000 | - | **Saved: 880,000** |
+| **F2-Score Focus**       | Lower Recall, Higher Precision  | Higher Recall, Lower Precision | **Better Recall (Catching More Attrition Cases)** |
+
+## 📉 Model Performance Comparison  
+
+The model was optimized using **hyperparameter tuning** to prioritize **recall** (important for reducing attrition losses). The tuned model has improved recall, ensuring more at-risk employees are correctly identified.
+
+| **Metric**     | **Before Hyperparameter Tuning** | **After Hyperparameter Tuning** |
+|---------------|--------------------------------|-------------------------------|
+| **Precision (Class 1 - Attrition)** | 1.00 | 0.38 |
+| **Recall (Class 1 - Attrition)** | 0.17 | **0.79** |
+| **F1-Score (Class 1 - Attrition)** | 0.29 | 0.51 |
+| **Accuracy** | 0.87 | 0.76 |
+| **Macro Avg Recall** | 0.59 | **0.77** |
+| **Macro Avg F1-Score** | 0.61 | **0.68** |
+
+
 ## Deployment
 
 The model is integrated into a **Streamlit** web app, allowing users to upload employee data and receive attrition predictions. Employees are categorized into:
